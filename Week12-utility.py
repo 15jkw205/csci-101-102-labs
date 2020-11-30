@@ -74,10 +74,14 @@ def intersect(listA,listB):
             new_list.append(element)
     return new_list
                    
-'''
 #7
 def not_in(listA,listB):
- '''   
+    new_list = []
+    for element in listA:
+        if element not in listB:
+            new_list.append(element)
+    return new_list
+
 #8
 def is_prime(integer):
     index = 2
