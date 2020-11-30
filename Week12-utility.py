@@ -36,7 +36,8 @@ def find_word_count(word_list,string):
 '''
 my_list = load_file("test.txt")
 find_word_count(my_list , "me")
-'''   
+'''
+
 #4
 def score_finder(list1,list2,name):
     new_list = []
@@ -53,8 +54,7 @@ def score_finder(list1,list2,name):
             break
             
     else:
-        print('OUTPUT player not found')
-# Having problems with this one! 
+        print('OUTPUT player not found') 
 '''
 #5
 def union(list1,list2):
