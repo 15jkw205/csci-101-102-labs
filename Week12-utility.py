@@ -7,7 +7,6 @@
 
 import math
 #1
-
 def load_file(filename):
     with open(filename, 'r') as file:
         reader = file.readlines()
@@ -85,16 +84,13 @@ def not_in(listA,listB):
 #8
 def is_prime(integer):
     index = 2
-    count = 0
     if integer == 1:
         return False
     while index <= math.sqrt(integer):
-        
         if (integer % index) == 0:
-            count += 1
             return False
         index += 1
-    if count == 0:
+    else:
         return True
 
         
