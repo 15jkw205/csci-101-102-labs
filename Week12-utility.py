@@ -73,9 +73,7 @@ def intersect(listA,listB):
         if element in listB:
             new_list.append(element)
     return new_list
-            
-            
-        
+                   
 '''
 #7
 def not_in(listA,listB):
