@@ -2,13 +2,14 @@
 # CSCI 102 - Section E - Group A
 # Week 12 - Utility using Git and Incremental Development
 # References: none
-# Time:
+# Time: TA Colin
 
 #1
-'''def load_file(filename): #need to run through each line of file 
-
-lines = load_file("text.txt")
-print("OUTPUT" , lines)
+def load_file(filename):
+    with open(filename, 'r') as file:
+       return file.readlines()
+'''lines = load_file("test.txt")
+print("OUTPUT" , lines) #why is this outputting an empty line???
 '''
 #2
 def update_string(first_string,second_string,index):
@@ -16,22 +17,31 @@ def update_string(first_string,second_string,index):
     print("OUTPUT" , updated_string)
     
 #3 
-'''def find_word_count(word_list,string):
+def find_word_count(word_list,string):
     count = 0
-    #call in load file (1st function)
-    if string in word_list:
-        count += 1
+    index = 0 
+    while index < len(word_list):
+        count += word_list[index].count(string)
+        index += 1 
     return count
-        
+'''
+my_list = load_file("test.txt")
+find_word_count(my_list , "me")
+'''   
 #4
 def score_finder(list1,list2,name):
-    for index in range (list1):
-        if name not in list1:
-            return print('player not found')
-        if name in list1:
+    new_list = []
+    new_name = name.lower()
+    for i in range(len(list1)):
+        new_list.append(list1[i].lower())
+        
+    for index in range(len(new_list)):
+        if new_name != new_list[index]:
+            print('player not found')
+        if new_name == new_list[index]:
             player_score = list2[index]
-            return print(f"OUTPUT {name} got a score of {player_score}")
-
+            print(f"OUTPUT {new_name} got a score of {player_score}")
+'''
 #5
 def union(list1,list2):
     mega_list = list1 + list2
