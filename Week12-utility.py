@@ -1,7 +1,8 @@
 # Jakob West
 # CSCI 102 - Section E - Group A
 # Week 12 - Utility using Git and Incremental Development
-# References: TA Colin
+# References: TA Colin,
+# https://www.geeksforgeeks.org/python-ways-to-remove-duplicates-from-list/
 # Time: 2.5 hours 
 
 import math
@@ -54,13 +55,16 @@ def score_finder(list1,list2,name):
             break
             
     else:
-        print('OUTPUT player not found') 
-'''
+        print('OUTPUT player not found')
+        
 #5
-def union(list1,list2):
-    mega_list = list1 + list2
-    return mega_list
-'''
+def union(listA,listB):
+    mega_list = listA + listB
+    ultra_list = []
+    for element in mega_list:
+        if element not in ultra_list:
+            ultra_list.append(element)
+    return ultra_list
 
 #6
 def intersect(listA,listB):
